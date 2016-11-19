@@ -1,0 +1,8 @@
+= bootstrap_form_for @recipe, remote: true do |f|
+
+  = f.text_field :title, autofocus: true, placeholder: t('.placeholders.title'), label: human_attribute(:title)
+  = f.text_area :story, autofocus: true, placeholder: t('.placeholders.story'), label: human_attribute(:story)
+  = f.text_area :ingredients, placeholder: t('.placeholders.ingredients'), label: human_attribute(:ingredients)
+  = f.text_area :instructions, placeholder: t('.placeholders.instructions'), label: human_attribute(:instructions)
+
+  = f.submit t('.submit'), class: 'btn btn-primary btn-fill'

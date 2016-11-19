@@ -1,0 +1,26 @@
+---
+pt-BR:
+  company:
+    name: YSimplicity
+    email: info@ysimplicity.com
+
+  app:
+    release_year: "2016"
+    meta:
+      description: Algumas das melhores receitas você só encontra aqui.
+
+  auth:
+    access_denied: Acesso negado.
+
+  mailer:
+    no_reply_email: "nao-responda@masterapp.mobi"
+
+  # Commons
+  back: Voltar
+  show: Visualizar
+  edit: Editar
+  update: Atualizar
+  destroy: Remover
+  confirm_question: Você tem certeza?
+  confirm_btn: 'Sim, remova!' # Sweet Alert confirmation dialog
+  cancel_btn: 'Cancelar' # Sweet Alert confirmation dialog

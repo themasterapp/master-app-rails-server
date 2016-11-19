@@ -1,0 +1,27 @@
+---
+en:
+  devise:
+    registrations:
+      password_confirmation_help: &password_confirmation_help
+        "(%{length} characters minimum)"
+      new:
+        welcome: Sign up
+        description: Create account to see it in action.
+        form:
+          sign_up: Sign up
+          password_confirmation_help: *password_confirmation_help
+          sign_in: Log in
+          sign_in_cta: Already have an account?
+          terms_and_policy: Agree the terms and policy
+
+      edit:
+        form:
+          email_confirmation: "Currently waiting confirmation for: %{email}"
+          current_password_help: (we need your current password to confirm your changes)
+          password_confirmation:
+            placeholder: *password_confirmation_help
+            help: (leave blank if you don't want to change it)
+        cancel_account:
+          header: Cancel Account
+          question: Unhappy? We'll be sad to see you go.
+          button: Cancel my account

@@ -1,0 +1,14 @@
+.card {
+    .content{
+        padding: 20px 20px;
+    }
+}
+
+
+//Fix Android container layout issue.
+// The css overflow property makes a blank screen.
+body.android-app {
+  .main-panel{
+    overflow: visible;
+  }
+}

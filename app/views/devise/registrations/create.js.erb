@@ -1,0 +1,10 @@
+<% if resource.errors.present? %>
+  $('form[class*="_user"]').replaceWith("<%= j render('devise/registrations/new/form') %>");
+<% else %>
+  <% if resource.persisted? %>
+    <% after_path_method = resource.active_for_authentication? ? :after_sign_up_path_for : :after_inactive_sign_up_path_for %>
+
+    Turbolinks.clearCache();
+    Turbolinks.visit("<%= j controller.send(after_path_method, resource) %>");
+  <% end %>
+<% end %>

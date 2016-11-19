@@ -1,0 +1,36 @@
+---
+en:
+  home:
+    index:
+      titles: &recipes_search_filters
+        my: My Recipes
+        latest: Latest
+      search:
+        placeholder: Look for a delicious recipe!
+        button: Search
+      
+    recipes_search_filters:
+      <<: *recipes_search_filters
+      
+    recipes:
+      my_recipes_guest_html: |
+        Hi,
+        <a href="%{url}" class="text-info" data-turbolinks-action="advance">sign up</a>
+        to publish your recipes!
+        
+      my_recipes_user_html: |
+        You haven't published any recipe yet.<br/>
+        What about
+        <a href="%{url}" class="text-info" data-turbolinks-action="advance">publishing one</a>
+        now?
+        
+    recipes_not_found:
+      message_for_my_search_html: |
+        Would you like
+        <a href="%{url}" class="text-info" data-turbolinks-action="replace">to search about this</a>
+        in all recipes?
+      
+      message_for_latest_search_html: |
+        <strong>Sorry!</strong><br/>
+        The recipe were looking for could not be found.<br />
+        <a href="%{url}" class="text-info" data-turbolinks-action="replace">Look all recipes!</a>.

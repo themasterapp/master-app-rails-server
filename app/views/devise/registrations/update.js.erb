@@ -1,0 +1,8 @@
+<% if resource.errors.present? %>
+  $('form[class*="_user"]').replaceWith("<%= j render('devise/registrations/edit/form') %>");
+<% else %>
+  <% if resource.persisted? %>
+    Turbolinks.clearCache();
+    Turbolinks.visit("<%= j controller.send(:after_update_path_for, resource) %>");
+  <% end %>
+<% end %>

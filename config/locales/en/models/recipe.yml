@@ -1,0 +1,14 @@
+---
+en:
+  activerecord:
+    models:
+      recipe:
+        one: Recipe
+        other: Recipes
+
+    attributes:
+      recipe:
+        title: Title
+        story: Story
+        ingredients: Ingredients
+        instructions: Instructions

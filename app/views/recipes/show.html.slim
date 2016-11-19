@@ -1,0 +1,34 @@
+div class="row recipe"
+  div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12"
+    div class="card"
+      div class="header"
+        - if policy(@recipe).edit?
+          p class="user"
+            = link_to edit_recipe_path(@recipe), class: 'btn btn-warning btn-xs btn-fill edit' do
+              i class="ti-pencil-alt"
+              = t('edit')
+              
+            = link_to(recipe_path(@recipe), data: confirm_dialog_data_to_action_destroy, class: 'btn btn-danger btn-xs destroy') do
+              i> class="ti-trash"
+              = t('destroy')
+              
+        h2 class="title"
+          strong= @recipe.title
+
+      div class="content"
+        p
+          small.text-info=@recipe.user.name
+        
+        = simple_format(@recipe.story)
+        
+        h3 class="text-primary"
+          = human_attribute(:ingredients)
+          
+        = simple_format(@recipe.ingredients)
+        
+        h3 class="text-primary"
+          = human_attribute(:instructions)
+          
+        = simple_format(@recipe.instructions)
+          
+        

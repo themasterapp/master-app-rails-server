@@ -1,0 +1,13 @@
+---
+pt-BR:
+  errors:
+    internal_server_error:
+      status:
+        code: 500
+        message: Erro Interno do Servidor
+
+      description_html: |
+        O servidor encontrou algo inesperado que não permitirá concluir a requisição.<br />
+        Nós pedimos desculpas.
+
+      homepage: Voltar para receitas

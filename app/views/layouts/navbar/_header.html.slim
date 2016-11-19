@@ -1,0 +1,9 @@
+button type="button" class="navbar-toggle"
+  span.sr-only= t('app.nav.toggle_navigation'.freeze)
+  span class="icon-bar bar1"
+  span class="icon-bar bar2"
+  span class="icon-bar bar3"
+
+/ Workaround to fix Chrome scrollTop issue
+a class="navbar-brand" id="scrollTopTarget"
+  = t("app.nav.views.#{controller_name}.#{action_name}")

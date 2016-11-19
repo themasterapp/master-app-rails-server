@@ -1,0 +1,4 @@
+<% if controller.send(:successfully_sent?, resource) %>
+  Turbolinks.clearCache();
+  Turbolinks.visit("<%= j controller.send(:new_session_path, resource) %>");
+<% end %>

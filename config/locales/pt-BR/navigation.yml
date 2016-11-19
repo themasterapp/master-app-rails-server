@@ -1,0 +1,27 @@
+---
+pt-BR:
+  app:
+    nav:
+      log_out: Logout
+      settings: Configurações
+      toggle_navigation: Alternar navegação
+      views:
+        sessions:
+          new: Login
+        registrations:
+          new: Cadastro
+          edit: Minha conta
+        passwords:
+          new: Esqueci minha senha
+          edit: Altere sua senha
+        errors:
+          not_found: Página Não Encontrada
+          internal_server_error: Erro Interno do Servidor
+        home:
+          index: Receitas
+        recipes:
+          new: Nova Receita
+          create: Nova Receita
+          edit: Editar Receita
+          update: Editar Receita
+          show: Receita

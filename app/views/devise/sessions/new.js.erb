@@ -1,0 +1,11 @@
+<% unless user_signed_in? %>
+  <%
+    # https://github.com/plataformatec/devise/blob/4c3838bb759ec741558ecf86bd6cf01465043e4c/lib/devise/failure_app.rb#L103
+    scope_class = Devise.mappings[Devise.default_scope].to
+    auth_keys = scope_class.authentication_keys
+    keys = (auth_keys.respond_to?(:keys) ? auth_keys.keys : auth_keys).map { |key| scope_class.human_attribute_name(key) }
+    message = I18n.t("devise.failure.invalid", authentication_keys: keys.join(I18n.t(:"support.array.words_connector")))
+  %>
+
+  RailsFlashMessagesAsNotifications.alert("<%= j message %>");
+<% end %>

@@ -1,0 +1,20 @@
+= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name), remote: true) do |f|
+  = f.text_field :name, autofocus: true, placeholder: User.human_attribute_name(:name), skip_label: true
+
+  = f.email_field :email, placeholder: User.human_attribute_name(:email), skip_label: true
+
+  = f.password_field :password, autocomplete: "off", placeholder: User.human_attribute_name(:password), skip_label: true
+
+  - if @minimum_password_length
+    = f.password_field :password_confirmation, autocomplete: "off", placeholder: User.human_attribute_name(:password_confirmation), skip_label: true, help: t(".password_confirmation_help", length: @minimum_password_length)
+  - else
+    = f.password_field :password_confirmation, autocomplete: "off", placeholder: User.human_attribute_name(:password_confirmation), skip_label: true
+
+  - if ENV['HIDE_TERMS_AND_POLICY'.freeze].blank?
+    div class="form-group"
+      div class="checkbox"
+        label
+          input type="checkbox"
+            = t(".terms_and_policy")
+
+  = f.submit t(".sign_up"), class: "btn btn-primary btn-block btn-fill"

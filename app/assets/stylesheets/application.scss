@@ -1,0 +1,18 @@
+//vendor/css
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "animate.css/animate";
+
+@import "paper-dashboard";
+@import "ext/paper-dashboard";
+
+@import "mixins";
+
+@import "views/home";
+@import "views/devise";
+@import "views/errors";
+
+// ADD THIS AT THE BOTTOM (otherwise the icons won't appear for Android devices)
+@import "font-awesome";
+@import "themify-icons";

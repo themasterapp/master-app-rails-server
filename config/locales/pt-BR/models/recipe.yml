@@ -1,0 +1,14 @@
+---
+pt-BR:
+  activerecord:
+    models:
+      recipe:
+        one: Receita
+        other: Receitas
+
+    attributes:
+      recipe:
+        title: Título
+        story: Comentários
+        ingredients: Ingredientes
+        instructions: Instruções

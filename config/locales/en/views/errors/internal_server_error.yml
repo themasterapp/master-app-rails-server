@@ -1,0 +1,13 @@
+---
+en:
+  errors:
+    internal_server_error:
+      status:
+        code: 500
+        message: Internal Server Error
+
+      description_html: |
+        The server encountered something unexpected that didn't allow it to complete the request.<br />
+        We apologize.
+
+      homepage: Back to recipes page

@@ -1,0 +1,12 @@
+# cta =  call to action
+---
+en:
+  devise:
+    sessions:
+      new:
+        welcome: Welcome
+        form:
+          sign_in: Log in
+          forgot_password: Forgot password?
+          account_cta: Sign up
+          account_question: Do not have an account?

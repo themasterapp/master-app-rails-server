@@ -1,0 +1,8 @@
+---
+pt-BR:
+  titles:
+    application: Master App
+    home:
+      index: Receitas
+    recipes:
+      show: Receita

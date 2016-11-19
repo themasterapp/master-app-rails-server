@@ -1,0 +1,4 @@
+<% if user_signed_in? %>
+  Turbolinks.clearCache();
+  Turbolinks.visit("<%= j controller.send(:after_sign_in_path_for, resource) %>");
+<% end %>

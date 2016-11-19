@@ -1,0 +1,10 @@
+footer class="footer"
+  div class="container-fluid" data-turbolinks="false"
+    nav class="pull-left"
+      ul
+        li= link_to 'https://github.com/themasterapp'.freeze, target: '_blank'.freeze do
+          | <i class='ti ti-github'></i> Github
+
+    div class="copyright pull-right"
+      | &copy #{t('app.release_year'.freeze)},
+      | #{t('.made_with_love_html'.freeze, contact: mail_to(t('company.email'.freeze), t('company.name'.freeze)))}

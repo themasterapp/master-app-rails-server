@@ -1,0 +1,58 @@
+.recipe {
+  p.user {
+    margin-bottom: 15px;
+    
+    .name, .edit { margin-right: 10px; }
+  }
+}
+
+.home.index {
+  .recipes-search {
+    margin-top: 20px;
+      
+    form .recipes-search-input {
+      @include strong-border;
+    }
+  }
+  
+  .recipe {
+    hr {
+      margin-top: 5px;
+    }
+    
+    h4 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: $screen-xs-min) {
+  .home.index .recipes-search form {
+    margin-top: 10px;
+    
+    .form-group {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .home.index .recipes-search {
+    form .recipes-search-input {
+      margin-right: 4px;
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-md-min)  {
+  .home.index .recipes-search form .recipes-search-input {
+    width: 300px;
+  }
+}
+
+@media (min-width: $screen-lg-min)  {
+  .home.index .recipes-search form .recipes-search-input {
+    width: 350px;
+  }
+}

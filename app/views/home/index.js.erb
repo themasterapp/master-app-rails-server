@@ -1,0 +1,18 @@
+<% if has_recipes? %>
+  $('.recipes-search-filters').replaceWith("<%= j render('home/recipes_search_filters'.freeze) %>");
+<% end %>
+
+$('.recipes').replaceWith("<%= j render('home/recipes'.freeze) %>");
+
+setTimeout(
+  function() {
+    // Workaround to fix Chrome scrollTop issue
+    <% if turbolinks_app? %>
+      TurbolinksNativeMessageHandler.postMessage({scrollTop: true});
+    <% else %>
+      $('.scrollTopFixer')[0].click();
+    <% end %>
+    $('[data-animate-css]').animateCSS('fadeIn');
+  },
+  0
+);

@@ -1,0 +1,27 @@
+---
+pt-BR:
+  devise:
+    registrations:
+      password_confirmation_help: &password_confirmation_help
+        "(%{length} caracteres no mínimo)"
+      new:
+        welcome: Cadastre-se
+        description: Crie uma conta para ver em ação.
+        form:
+          sign_up: Cadastre-se
+          password_confirmation_help: *password_confirmation_help
+          sign_in: Login
+          sign_in_cta: Já tem uma conta?
+          terms_and_policy: Concordo com os termos e política
+
+      edit:
+        form:
+          email_confirmation: "Atualmente aguardando confirmação para: %{email}"
+          current_password_help: (precisamos de sua senha atual para confirmar as alterações)
+          password_confirmation:
+            placeholder: *password_confirmation_help
+            help: (deixe em branco se você não quer mudá-la)
+        cancel_account:
+          header: Cancele a conta
+          question: Infeliz? Vamos ficar triste em te ver sair.
+          button: Cancele minha conta

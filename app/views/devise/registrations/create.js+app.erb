@@ -1,0 +1,7 @@
+<% if resource.errors.present? %>
+    $('form[class*="_user"]').replaceWith("<%= j render('devise/registrations/new/form') %>");
+<% else %>
+    <% if user_signed_in? %>
+      TurbolinksNativeMessageHandler.postMessage({auth_token: "<%= j current_user.authentication_token %>"});
+  <% end %>
+<% end %>

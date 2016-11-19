@@ -1,0 +1,13 @@
+nav class="navbar navbar-default"
+  div class="container-fluid"
+    div.navbar-header data-turbolinks="false"
+      = render('layouts/navbar/header')
+
+    div class="collapse navbar-collapse"
+      ul class="nav navbar-nav navbar-right"
+
+        - if !user_signed_in?
+          = render('layouts/navbar/locales/for_guests')
+          
+        - else
+          = render('layouts/navbar/settings')

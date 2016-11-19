@@ -1,0 +1,17 @@
+---
+pt-BR:
+  errors:
+    not_found:
+      homepage: Receitas
+
+      status:
+        code: 404
+        message:
+          Desculpe, mas a página que você solicitou não foi encontrada.
+
+      description:
+        Você pode ter acessado um link expirado ou digitado incorretamente o endereço.
+        
+      form:
+        placeholder: O que você deseja?
+        submit: Buscar

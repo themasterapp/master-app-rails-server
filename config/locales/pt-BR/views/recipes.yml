@@ -1,0 +1,24 @@
+---
+pt-BR:
+  recipes:
+    new:
+      welcome: Compartilhe sua receita conosco!
+    edit:
+      welcome: Torne sua receita ainda melhor!
+      
+    create:
+      notice: Receita publicada com sucesso.
+      
+    update:
+      notice: Receita atualizada com sucesso.
+      
+    destroy:
+      notice: Receita removida com sucesso.
+      
+    form:
+      submit: Publicar
+      placeholders:
+        title: Título da receita...
+        story: Comente sobre essa receita...
+        ingredients: '- 1 xícara de farinha de milho'
+        instructions: '1. Forno pré-aquecido à 180 graus...'

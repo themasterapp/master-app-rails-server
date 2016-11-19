@@ -1,0 +1,5 @@
+@mixin strong-border {
+  border-style: solid;
+  border-width: $border-thick;
+  border-color: $default-color;
+}

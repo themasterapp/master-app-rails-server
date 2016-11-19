@@ -1,0 +1,8 @@
+div class="recipes"
+  - @recipes.each do |recipe|
+    = render partial: 'recipe'.freeze, locals: {recipe: recipe}
+
+  = paginate @recipes, remote: true, params: home_params.search, param_name: home_params.current_filter_page_name
+  
+  / Workaround to fix Chrome scrollTop issue
+  a.scrollTopFixer style="display: none;" href="#scrollTopTarget" data-turbolinks="false" Top

@@ -1,0 +1,17 @@
+section class="row"
+  div class="col-xs-12"
+    div class="card"
+      div class="header text-center"
+        h1= t('titles.application')
+        
+        div class="recipes-search row"
+          = render partial: 'recipes_search_filters'.freeze
+              
+          div class="recipes-search-form col-md-6 col-sm-7 col-xs-12"
+            = bootstrap_form_tag url: root_path, layout: :inline, method: :get, data: {global_search: true } do |f|
+              = f.hidden_field 'search[filter]', value: home_params.current_filter
+              = f.text_field 'search[q]', value: home_params.fetch_search(:q), placeholder: t('.search.placeholder'), class: 'recipes-search-input', hide_label: true
+              = f.submit  t('.search.button'), class: "btn btn-default btn-fill"
+
+      div class="content"
+        = render partial: 'recipes'.freeze

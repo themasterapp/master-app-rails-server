@@ -1,0 +1,5 @@
+= no_recipes_message_component do
+  - if home_params.my_recipes_filter?
+    = t('.message_for_my_search_html'.freeze, url: root_path(search: {q: params.dig(:search, :q)}))
+  - else
+    = t('.message_for_latest_search_html'.freeze, url: root_path)

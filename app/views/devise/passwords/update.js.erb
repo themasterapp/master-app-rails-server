@@ -1,0 +1,8 @@
+<% if resource.errors.present? %>
+  <% resource.errors.full_messages.each do |msg| %>
+    RailsFlashMessagesAsNotifications.alert("<%= j msg %>");
+  <% end %>
+<% else %>
+  Turbolinks.clearCache();
+  Turbolinks.visit("<%= j controller.send(:after_resetting_password_path_for, resource) %>");
+<% end %>

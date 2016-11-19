@@ -1,0 +1,34 @@
+/ Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
+/ Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
+
+div class="sidebar" data-background-color="white" data-active-color="danger"
+  div class="sidebar-wrapper"
+    div class="logo"
+      = link_to t('titles.application'), root_path, class: "simple-text"
+
+    ul class="nav"
+      - if !user_signed_in?
+        li class="#{'active' if current_page?(new_user_session_path)}"
+          = link_to new_user_session_path do
+            i> class="ti-key"
+            p= t('app.nav.views.sessions.new')
+            
+        li class="#{'active' if current_page?(new_user_registration_path)}"
+          = link_to new_user_registration_path do
+            i> class="ti-user"
+            p= t('app.nav.views.registrations.new')
+      li class="#{'active' if current_page?(root_path) && !home_params.my_recipes_filter?}"
+        = link_to root_path do
+          i> class="ti-book"
+          p= t('app.nav.views.home.index')
+
+      li class="#{'active' if home_params.my_recipes_filter?}"
+        = link_to root_path(home_params.to_search) do
+          i> class="ti-write"
+          p= t('home.recipes_search_filters.my')
+    
+      - if user_signed_in?
+        li class="#{'active' if current_page?(new_recipe_path)}"
+          = link_to new_recipe_path do
+            i> class="ti-pencil"
+            p= t('app.nav.views.recipes.new')

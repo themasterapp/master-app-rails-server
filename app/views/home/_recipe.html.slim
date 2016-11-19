@@ -1,0 +1,25 @@
+div class="row recipe"
+  div class="col-md-12 recipe"
+    hr
+
+    p class="user"
+      - if !home_params.my_recipes_filter?
+        span class="text-default name"
+          = recipe.user.name
+        
+      - if policy(recipe).edit?
+        = link_to edit_recipe_path(recipe), class: 'btn btn-warning btn-xs btn-fill edit' do
+          i class="ti-pencil-alt"
+          = t('edit')
+        
+        - if home_params.my_recipes_filter?
+          = link_to(recipe_path(recipe, back_to: request.fullpath), data: confirm_dialog_data_to_action_destroy, class: 'btn btn-danger btn-xs destroy') do
+            i> class="ti-trash"
+            = t('destroy')
+      
+    h4
+      = link_to recipe.title, recipe
+        
+    - if recipe.story.present?
+      p
+        = recipe.story

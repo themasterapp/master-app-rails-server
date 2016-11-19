@@ -1,0 +1,11 @@
+.errors {
+  .card .content{
+    h4 {
+      margin-top: 0;
+    }
+    
+    input[type="text"] {
+      @include strong-border;
+    }
+  }
+}

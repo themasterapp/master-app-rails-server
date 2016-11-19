@@ -1,0 +1,13 @@
+---
+pt-BR:
+  layouts:
+    navbar:
+      locales:
+        defaults: &call_to_action
+          call_to_action_html:
+            Trocar para <strong>inglês</strong>
+          
+        for_users:
+          <<: *call_to_action
+        for_guests:
+          <<: *call_to_action

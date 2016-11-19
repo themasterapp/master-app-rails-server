@@ -1,0 +1,5 @@
+/ # TODO: Create a component/helper and improve the layout according to the variant
+li
+  = link_to url_for(params.to_unsafe_hash.merge!(locale: I18n.locale == :en ? :"pt-BR" : :en)), data: {locale: true} do
+    i> class="ti-world"
+    p= t('.call_to_action_html'.freeze)

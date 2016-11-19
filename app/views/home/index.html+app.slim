@@ -1,0 +1,13 @@
+section class="row"
+  div class="col-xs-12"
+    div class="card"
+      div class="header text-center"
+        / Workaround to fix Chrome scrollTop issue
+        h1#scrollTopTarget= t('titles.application')
+        
+        div class="recipes-search row"
+          - if home_params.fetch_search(:q).present?
+            = render partial: 'recipes_search_filters'.freeze
+
+      div class="content"
+        = render partial: 'recipes'.freeze

@@ -1,0 +1,17 @@
+---
+en:
+  errors:
+    not_found:
+      homepage: Recipes
+
+      status:
+        code: 404
+        message:
+          Sorry, the page you requested was not found.
+
+      description:
+        You may have clicked an expired link or mistyped the address.
+
+      form:
+        placeholder: What do you wish?
+        submit: Search

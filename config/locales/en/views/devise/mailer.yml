@@ -1,0 +1,10 @@
+---
+en:
+  devise:
+    mailer:
+      reset_password_instructions:
+        hello: Hello %{email}!
+        announcement: Someone has requested a link to change your password. You can do this through the link below.
+        change_my_password: Change my password
+        ignore_message: If you didn't request this, please ignore this email.
+        notice_message: Your password won't change until you access the link above and create a new one.

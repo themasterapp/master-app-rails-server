@@ -1,0 +1,15 @@
+div class="row"
+  div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12"
+    div class="card sign_up"
+      div class="header"
+        h3 class="title"
+          = "#{t('edit')} #{resource.class.model_name.human}"
+
+      div class="content"
+        = render('devise/registrations/edit/form')
+        
+        h4= t('.cancel_account.header')
+
+        p
+          small= t('.cancel_account.question')
+        p= button_to t(".cancel_account.button"), registration_path(resource_name), data: confirm_dialog_data_to_action_destroy, class: "btn btn-danger btn-block btn-fill"

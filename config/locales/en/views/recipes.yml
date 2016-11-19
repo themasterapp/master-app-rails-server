@@ -1,0 +1,24 @@
+---
+en:
+  recipes:
+    new:
+      welcome: Share your recipe with us!
+    edit:
+      welcome: Make your recipe even better!
+      
+    create:
+      notice: Recipe was successfully published.
+      
+    update:
+      notice: Recipe was successfully updated.
+      
+    destroy:
+      notice: Recipe was successfully destroyed.
+      
+    form:
+      submit: Publish
+      placeholders:
+        title: Recipe title...
+        story: Tell the story of the recipe...
+        ingredients: '- 1 large egg'
+        instructions: '1. In a large mixing bowl, combine the egg...'

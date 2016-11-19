@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    / See meta-tags gem and MetaTagsHelpers concern.
+    = display_meta_tags
+
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+
+    = csrf_meta_tags
+
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload"
+    link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'
+
+
+    = javascript_include_tag "application", "data-turbolinks-track": "reload"
+
+  body class=body_class('site-mode'.freeze) *body_data
+    div class="wrapper"
+      = render "layouts/flash_messages"
+
+      = render "layouts/sidebar"
+
+      div class="main-panel" data-animate-css=""
+
+        = render "layouts/topnavbar"
+
+        div class="content"
+          div class="container-fluid"
+            = yield
+
+        = render "layouts/footer"

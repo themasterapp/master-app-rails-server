@@ -1,0 +1,4 @@
+- if flash.present?
+  ul.hidden id="flash-messages"
+    - flash.each do |type, text|
+      li data-type=type data-text=text

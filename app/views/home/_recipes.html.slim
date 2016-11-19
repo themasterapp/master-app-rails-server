@@ -1,0 +1,10 @@
+- if home_params.my_recipes_filter? && !user_signed_in?
+  = no_recipes_message_component t('.my_recipes_guest_html'.freeze, url: new_user_registration_path)
+- elsif home_params.my_recipes_filter? && !has_recipes?
+  = no_recipes_message_component t('.my_recipes_user_html'.freeze, url: new_recipe_path)
+  
+- else
+  - if @recipes.present?
+    = render partial: 'recipes_relation'.freeze
+  - else
+    = render partial: 'recipes_not_found'.freeze

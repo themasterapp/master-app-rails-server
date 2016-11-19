@@ -1,0 +1,10 @@
+---
+pt-BR:
+  devise:
+    mailer:
+      reset_password_instructions:
+        hello: Olá %{email}!
+        announcement: Alguém pediu um link para alterar sua senha. Você pode fazer isso através do link abaixo.
+        change_my_password: Altere minha senha
+        ignore_message: Se você não solicitou isto, por favor ignore este e-mail.
+        notice_message: Sua senha não vai mudar até que você acessar o link acima e criar um novo.

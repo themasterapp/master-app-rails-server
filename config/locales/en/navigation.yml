@@ -1,0 +1,27 @@
+---
+en:
+  app:
+    nav:
+      log_out: Log out
+      settings: Settings
+      toggle_navigation: Toggle navigation
+      views:
+        sessions:
+          new: Sign in
+        registrations:
+          new: Sign up
+          edit: My account
+        passwords:
+          new: I forgot my password
+          edit: Change your password
+        errors:
+          not_found: Page Not Found
+          internal_server_error: Internal Server Error
+        home:
+          index: Recipes
+        recipes:
+          new: New Recipe
+          create: New Recipe
+          edit: Edit Recipe
+          update: Edit Recipe
+          show: Recipe

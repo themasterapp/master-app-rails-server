@@ -1,0 +1,12 @@
+# cta =  call to action
+---
+pt-BR:
+  devise:
+    sessions:
+      new:
+        welcome: Bem-vindo
+        form:
+          sign_in: Login
+          forgot_password: Esqueceu a senha?
+          account_cta: Cadastre-se
+          account_question: Não possui uma conta?

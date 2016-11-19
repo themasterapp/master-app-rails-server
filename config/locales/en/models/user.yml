@@ -1,0 +1,30 @@
+---
+en:
+  activerecord:
+    models:
+      user:
+        one: User
+        other: Users
+
+    attributes:
+      user/role:
+        user: User
+        admin: Admin
+      user:
+        name: Name
+        role: Role
+        email: Email
+        password: Password
+        password_confirmation: Password Confirmation
+        remember_me: Remember me
+        current_sign_in_at: Current sign in at
+        last_sign_in_at: Last sign in
+        sign_in_count: Sign in counts
+        reset_password_token: Reset password token
+        encrypted_password: Encrypted password
+        current_sign_in_ip: Current sign in IP
+        last_sign_in_ip: Last sign in IP
+        reset_password_sent_at: Reset password sent at
+        remember_created_at: Remember created at
+        created_at: Created at
+        updated_at: Updated at

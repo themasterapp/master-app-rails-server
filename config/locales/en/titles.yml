@@ -1,0 +1,8 @@
+---
+en:
+  titles:
+    application: Master App
+    home:
+      index: Recipes
+    recipes:
+      show: Recipe

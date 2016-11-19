@@ -1,0 +1,30 @@
+---
+pt-BR:
+  activerecord:
+    models:
+      user:
+        one: Usuário
+        other: Usuários
+
+    attributes:
+      user/role:
+        user: Usuário
+        admin: Administrador
+      user:
+        name: Nome
+        role: Nível de acesso
+        email: Email
+        password: Senha
+        password_confirmation: Confirmar senha
+        remember_me: Permanecer conectado
+        current_sign_in_at: Login atual
+        last_sign_in_at: Último login
+        sign_in_count: Número de logins
+        reset_password_token: Token de redefinição de senha
+        encrypted_password: Senha Encriptada
+        current_sign_in_ip: Login atual no IP
+        last_sign_in_ip: Último login no IP
+        reset_password_sent_at: Redefinição da senha enviada em
+        remember_created_at: Lembrete criado em
+        created_at: Criado em
+        updated_at: Atualizado em

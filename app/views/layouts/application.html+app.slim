@@ -1,0 +1,26 @@
+doctype html
+html data-turbolinks-native-message-handler=ENV.fetch('TURBOLINKS_NATIVE_MESSAGE_HANDLER'.freeze)
+  head
+    / See meta-tags gem and MetaTagsHelpers concern.
+    = display_meta_tags
+
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+
+    = csrf_meta_tags
+
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload"
+    link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'
+
+
+    = javascript_include_tag "application", "data-turbolinks-track": "reload"
+
+  body class=body_class("app-mode #{'android-app' if turbolinks_android_app?}") *body_data
+    div class="wrapper" data-auto-navbar-collapse="true"
+      = render "layouts/flash_messages"
+
+      div class="main-panel"
+        div class="content" data-animate-css=""
+          div class="container-fluid"
+            = yield

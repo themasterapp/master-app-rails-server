@@ -1,0 +1,37 @@
+---
+pt-BR:
+  home:
+    index:
+      titles: &recipes_search_filters
+        my: Minhas Receitas
+        latest: Receitas
+        
+      search:
+        placeholder: Procure uma receita deliciosa!
+        button: Busque
+        
+    recipes_search_filters:
+      <<: *recipes_search_filters
+      
+    recipes:
+      my_recipes_guest_html: |
+        Olá,
+        <a href="%{url}" class="text-info" data-turbolinks-action="advance">cadastre-se</a>
+        para publicar suas receitas!
+        
+      my_recipes_user_html: |
+        Você ainda não publicou nenhuma receita.<br/>
+        Que tal <a href="%{url}" class="text-info" data-turbolinks-action="advance">publicar</a>
+        uma agora?
+        
+    recipes_not_found:
+      message_for_my_search_html: |
+        Que tal
+        <a href="%{url}" class="text-info" data-turbolinks-action="replace">pesquisar por isso</a>
+        em todas as receitas?
+        
+      message_for_latest_search_html: |
+        <strong>Desculpe!</strong><br/>
+        A receita que você está procurando não foi encontrada.<br />
+        <a href="%{url}" class="text-info" data-turbolinks-action="replace">Ver todas as receitas</a>!
+        

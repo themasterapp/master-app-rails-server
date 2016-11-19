@@ -1,0 +1,12 @@
+div class="row errors"
+  div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12"
+    div class="card text-center"
+      div class="header"
+        h2 class="title"
+          strong.text-danger= t(".status.code")
+
+      div class="content"
+        h4= t('.status.message')
+        
+        p= t('.description_html')
+        p= link_to t('.homepage'), root_path, class: 'btn btn-primary btn-fill'
